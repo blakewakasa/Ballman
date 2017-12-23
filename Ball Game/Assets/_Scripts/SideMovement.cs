@@ -22,7 +22,7 @@ public class SideMovement : MonoBehaviour {
 	void FixedUpdate () {
 		
         //rb.velocity = new Vector3(0.0f,0.0f , advance);
-        rb.velocity = new Vector3(0.0f, 0.0f, advance);
+        rb.velocity = new Vector3(0.0f, rb.velocity.y, advance);
         
 
 		if (Input.GetKey(KeyCode.RightArrow))
@@ -31,7 +31,7 @@ public class SideMovement : MonoBehaviour {
             {
                 rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
             }*/
-            rb.velocity = (new Vector3(sidespeed, 0.0f, advance));
+            rb.velocity = (new Vector3(sidespeed, rb.velocity.y, advance));
 			//transform.Translate(sidespeed * Time.deltaTime, 0,0);
 		}
 
@@ -41,7 +41,7 @@ public class SideMovement : MonoBehaviour {
             {
                 rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
             }*/
-            rb.velocity =(new Vector3(-sidespeed, 0.0f, advance));
+            rb.velocity =(new Vector3(-sidespeed, rb.velocity.y, advance));
 			//transform.Translate(-sidespeed * Time.deltaTime, 0,0);
 		}
 
