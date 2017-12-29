@@ -380,7 +380,9 @@ MonoBehaviour:
 
     Regular form
 
-    Large form'
+    Large form
+
+    Pause'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d62a573c923f5cb47b8ff65261033b90, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: d62a573c923f5cb47b8ff65261033b90, type: 2}
@@ -448,12 +450,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: -46.81305, z: 171.81705, w: -130.9178}
   m_textInfo:
     textComponent: {fileID: 145392480}
-    characterCount: 60
+    characterCount: 66
     spriteCount: 0
-    spaceCount: 10
-    wordCount: 11
+    spaceCount: 11
+    wordCount: 12
     linkCount: 0
-    lineCount: 6
+    lineCount: 7
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 1
@@ -952,7 +954,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "LEFT ARROW \nRIGHT ARROW\nSPACE \nQ\nE\nR"
+  m_text: "LEFT ARROW \nRIGHT ARROW\nSPACE \nQ\nE\nR\nESC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d62a573c923f5cb47b8ff65261033b90, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: d62a573c923f5cb47b8ff65261033b90, type: 2}
@@ -1020,12 +1022,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: -46.81305, z: 171.81705, w: -130.9178}
   m_textInfo:
     textComponent: {fileID: 408120329}
-    characterCount: 36
+    characterCount: 40
     spriteCount: 0
-    spaceCount: 9
-    wordCount: 8
+    spaceCount: 10
+    wordCount: 9
     linkCount: 0
-    lineCount: 6
+    lineCount: 7
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 1
