@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 23942436738682038}
   - component: {fileID: 135195921971358868}
   - component: {fileID: 54747950570884304}
-  - component: {fileID: 114422271509911616}
-  - component: {fileID: 114800646074310712}
   - component: {fileID: 114351717149648840}
+  - component: {fileID: 114788545863010840}
+  - component: {fileID: 114144851898460736}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -84,6 +84,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -99,6 +100,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -129,6 +131,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114144851898460736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1008396093970628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7003d4f9d0f1604ba3151bf8927174e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sidespeed: 10
+  advance: 10
 --- !u!114 &114351717149648840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,33 +159,18 @@ MonoBehaviour:
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   AirBound: 0
---- !u!114 &114422271509911616
+--- !u!114 &114788545863010840
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1008396093970628}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e004fefca5c7ba44d9c5ffd46fdee2ed, type: 3}
+  m_Script: {fileID: 11500000, guid: d4e653d712873b941a540d4ae518f61d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovePower: 10
-  m_UseTorque: 0
-  m_MaxAngularVelocity: 25
-  m_JumpPower: 4
-  Move_forward: 10
---- !u!114 &114800646074310712
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1008396093970628}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daa7e0829bc72c94babd728cc0466196, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  ratioChange: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!135 &135195921971358868
 SphereCollider:
   m_ObjectHideFlags: 1
