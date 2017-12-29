@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class SizeChange : MonoBehaviour {
     public Vector3 ratioChange;
-    private static bool isBig = false;
-    private static bool isSmall = false;
-    private static bool isRegular = true;
-
+    public static bool isBig = false;
+    public static bool isSmall = false;
+    public static bool isRegular = true;
+    private Vector3 originalSize;
     //public Animator playerAnim; 
     // Use this for initialization
     void Start () {
        // playerAnim = GetComponent<Animator>();
-	}
+       originalSize = transform.localScale;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,42 +21,42 @@ public class SizeChange : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Q) && !isSmall)
         {
            // toSmallAnim();
-            changeSmall();
+            ChangeSmall();
             isSmall = true;
             isBig = false;
             isRegular = false;
         }
-        else if (Input.GetKeyDown(KeyCode.W))
+        else if (Input.GetKeyDown(KeyCode.W)&&!isRegular)
         {
-            changeRegular();
+            ChangeRegular();
             isRegular = true;
             isBig = false;
             isSmall = false;
         }
         else if (Input.GetKeyDown(KeyCode.E)&&!isBig)
         {
-            changeBig();
+            ChangeBig();
             isBig = true;
             isSmall = false;
             isRegular = false;
         }
 
             }
-    private void changeSmall()
+    private void ChangeSmall()
     {
-        transform.localScale -= ratioChange;
+        transform.localScale = originalSize-ratioChange;
         /*for (float i = 0.0f; i / 10 < ratioChange.x; ++i)
         
             transform.localScale -= new Vector3(ratioChange.x / 10, ratioChange.y / 10, ratioChange.z / 10);
         */
     }
-    private void changeRegular()
+    private void ChangeRegular()
     {
-        transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        transform.localScale = originalSize;
     }
-    private void changeBig()
+    private void ChangeBig()
     {
-        transform.localScale += ratioChange;
+        transform.localScale =originalSize+ ratioChange;
     }
     /*private void toSmallAnim()
     {
