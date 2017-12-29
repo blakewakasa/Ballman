@@ -6,6 +6,7 @@ public class OptionsMenu : MonoBehaviour {
 
     
     AudioSource audioSource;
+    public static float uniVolume = -30;
     /*void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -15,6 +16,14 @@ public class OptionsMenu : MonoBehaviour {
     }*/
     public void SetVolume(float volume)
     {
-        AudioListener.volume = volume;
+        if (uniVolume !=-30)
+        {
+            AudioListener.volume = uniVolume;
+        }
+        else
+        {
+            AudioListener.volume = volume;
+        }
+        
     }
 }
