@@ -155,7 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d5f529f22c5f2e43b3ff3fba30c75f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVelocity: 5
+  jumpVelocity: 6
+  jump: {x: 0, y: 1, z: 0}
+  jumpForce: 6
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   AirBound: 0

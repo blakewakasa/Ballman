@@ -6,14 +6,22 @@ public class Jump : MonoBehaviour {
 
 	[Range(1,10)]
 	public float jumpVelocity;
-	public float fallMultiplier = 2.5f; //Holding Jump
+    public Vector3 jump;
+    [Range(1,10)]
+    public float jumpForce; //testing out forces
+
+    public float fallMultiplier = 2.5f; //Holding Jump
 	public float lowJumpMultiplier = 2f;//Tab Jump
 	public bool AirBound;
 	Rigidbody rb;
-
-	void Awake(){
+    void Start()
+    {
+        
+    }
+    void Awake(){
 		rb = GetComponent<Rigidbody> ();
-		AirBound = false;
+        
+        AirBound = false;
 	}
 
 	void Update(){
@@ -22,7 +30,9 @@ public class Jump : MonoBehaviour {
 			
 
 			if (Input.GetButtonDown ("Jump")) {
-				rb.velocity = Vector3.up * jumpVelocity;
+                //rb.velocity = Vector3.up * jumpVelocity;
+                
+                rb.AddForce(jump *jumpForce, ForceMode.Impulse);//trying out this instead of the velocity for jumping needs a vector3
 				AirBound = true;
 			}
 			if (rb.velocity.y < 0) {
