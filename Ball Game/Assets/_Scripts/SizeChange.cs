@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeSize : MonoBehaviour {
+public class SizeChange : MonoBehaviour {
     public Vector3 ratioChange;
-    public static bool isBig = false;
-    public static bool isSmall = false;
-    public static bool isRegular = true;
-    private Vector3 originalSize;
+    private static bool isBig = false;
+    private static bool isSmall = false;
+    private static bool isRegular = true;
 
     //public Animator playerAnim; 
     // Use this for initialization
     void Start () {
-        originalSize = transform.localScale;
        // playerAnim = GetComponent<Animator>();
 	}
 	
@@ -27,7 +25,7 @@ public class ChangeSize : MonoBehaviour {
             isBig = false;
             isRegular = false;
         }
-        else if (Input.GetKeyDown(KeyCode.W) &&!isRegular)
+        else if (Input.GetKeyDown(KeyCode.W))
         {
             changeRegular();
             isRegular = true;
@@ -45,7 +43,7 @@ public class ChangeSize : MonoBehaviour {
             }
     private void changeSmall()
     {
-        transform.localScale = originalSize-ratioChange;
+        transform.localScale -= ratioChange;
         /*for (float i = 0.0f; i / 10 < ratioChange.x; ++i)
         
             transform.localScale -= new Vector3(ratioChange.x / 10, ratioChange.y / 10, ratioChange.z / 10);
@@ -53,11 +51,11 @@ public class ChangeSize : MonoBehaviour {
     }
     private void changeRegular()
     {
-        transform.localScale = originalSize;
+        transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
     }
     private void changeBig()
     {
-        transform.localScale = originalSize+ratioChange;
+        transform.localScale += ratioChange;
     }
     /*private void toSmallAnim()
     {
