@@ -4014,7 +4014,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &925402660
 Prefab:
@@ -4065,7 +4065,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &925402661 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 4850996677160038, guid: efe1345144f321f49b7d6d6abd14df6c,
+  m_PrefabParentObject: {fileID: 4607952973517464, guid: efe1345144f321f49b7d6d6abd14df6c,
     type: 2}
   m_PrefabInternal: {fileID: 925402660}
 --- !u!1001 &930101071
