@@ -4,9 +4,7 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other){
-        SizeChange.isSmall = false;
-        SizeChange.isRegular = true;
-        SizeChange.isBig = false;
+        SizeChange.ResetAll();
         SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex+1);
 	}
 }

@@ -14,9 +14,8 @@ public class FallOff : MonoBehaviour {
 	void Update () {
         if (Ground.transform.position.y>this.transform.position.y)
         {
-            SizeChange.isSmall = false;
-            SizeChange.isRegular = true;
-            SizeChange.isBig = false;
+            SizeChange.ResetAll();
+          
             FindObjectOfType<GameManager>().EndGame();
         }
     }

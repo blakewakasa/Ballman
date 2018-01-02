@@ -58,6 +58,12 @@ public class SizeChange : MonoBehaviour {
     {
         transform.localScale =originalSize+ ratioChange;
     }
+    public static void ResetAll()
+    {
+        isRegular = true;
+        isSmall = false;
+        isBig = false;
+    }
     /*private void toSmallAnim()
     {
         if (isRegular)
