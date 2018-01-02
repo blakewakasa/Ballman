@@ -951,7 +951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1445384161477294
 GameObject:
   m_ObjectHideFlags: 1
@@ -1676,7 +1676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4318563852928980}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4961,7 +4961,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 21ec96b402968de408a4e264d14440ea, type: 2}
+  - {fileID: 2100000, guid: f10e31f82aefd0740beb2dd6a67cbce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
