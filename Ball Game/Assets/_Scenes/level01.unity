@@ -891,13 +891,13 @@ Prefab:
       objectReference: {fileID: 1403243310}
     - target: {fileID: 1431051703712460, guid: efe1345144f321f49b7d6d6abd14df6c, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23631612407259282, guid: efe1345144f321f49b7d6d6abd14df6c,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 21ec96b402968de408a4e264d14440ea, type: 2}
+      objectReference: {fileID: 2100000, guid: f10e31f82aefd0740beb2dd6a67cbce4, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: efe1345144f321f49b7d6d6abd14df6c, type: 2}
   m_IsPrefabParent: 0
